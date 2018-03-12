@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+       .card{
+           margin: 20px;
+       }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.jpg" alt="Logo" style="width:200px;">
+        </a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">基础信息</a>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        生产管理
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">生产计划</a>
+                        <a class="dropdown-item" href="#">排程单</a>
+                        <a class="dropdown-item" href="#">领料单</a>
+                        <a class="dropdown-item" href="#">验收单</a>
+                        <a class="dropdown-item" href="#">生产成本核算</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        库存管理
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">入库单</a>
+                        <a class="dropdown-item" href="#">出库单</a>
+                        <a class="dropdown-item" href="#">调拨单</a>
+                        <a class="dropdown-item" href="#">盘点</a>
+                        <a class="dropdown-item" href="#">预警</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        采购管理
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">采购清单</a>
+                        <a class="dropdown-item" href="#">采购订单</a>
+                        <a class="dropdown-item" href="#">收货单</a>
+                        <a class="dropdown-item" href="#">退货单</a>
+                        <a class="dropdown-item" href="#">采购发票</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        销售管理
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">销售单</a>
+                        <a class="dropdown-item" href="#">销售发票</a>
+                        <a class="dropdown-item" href="#">利润分析</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 卡片 -->
+    <div class="container">
+        <h2>首页</h2>
+        <div class="row">
+            <div class="card col-sm-3">
+                <div class="card-header">头部</div>
+                <div class="card-body">Basic card Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae ad odio a eum laudantium porro voluptates iure iusto dolor ducimus molestias, amet minima reiciendis, autem totam suscipit deserunt praesentium officia.</div>
+                <!-- <div class="card-footer">尾部</div> -->
+            </div>
+            
+            <div class="card bg-primary text-white col-sm-3">
+                <div class="card-body">Primary card</div>
+            </div>
+            
+            <div class="card bg-success text-white col-sm-3">
+                <div class="card-body">Success card</div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="card bg-info text-white col-sm-3">
+                <div class="card-body">Info card</div>
+            </div>
+            <div class="card bg-warning text-white col-sm-3">
+                <div class="card-body">Warning card Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam non voluptates est sequi eaque quo velit vero laboriosam voluptatibus expedita doloremque, hic reprehenderit perspiciatis soluta, saepe molestiae animi tempora doloribus.</div>
+            </div>
+            <div class="card bg-danger text-white col-sm-3">
+                <div class="card-body">Danger card</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script>
+        // readonly属性的操作
+        // $('input[name=username]').attr("readonly", "readonly")
+        // $('input[name=username]').removeAttr("readonly");
+        $(function () {
+            $(".card").hover(function () {
+                $(this).css({"transform":"scale(1.2,1.2)","position":"relative","zIndex":9});
+            }, function () {
+                $(".card").css({"transform": "scale(1,1)", "position": "relative", "zIndex": 0 });
+            });
+        })
+    </script>
+</body>
+
+</html>
